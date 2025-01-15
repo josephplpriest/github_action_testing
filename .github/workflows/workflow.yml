@@ -1,9 +1,13 @@
 name: test-workflow
 
-on: push
-  
+on: 
+  push:
+    branches: ["main", "dev"] 
+
 jobs:
   example-job:
+    runs-on: ubuntu-latest
+
     steps:
       - name: Access commit hash
         run: echo "The commit hash is ${{ github.sha }}"
