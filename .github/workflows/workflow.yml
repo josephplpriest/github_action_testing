@@ -1,0 +1,15 @@
+name: test-workflow
+
+on: push
+  
+jobs:
+  example-job:
+    steps:
+      - name: Access commit hash
+        run: echo "The commit hash is ${{ github.sha }}"
+      
+      - name: Access branch name
+        run: echo "The branch name is ${{ github.ref_name }}"
+      
+      - name: Access repository name
+        run: echo "The repository name is ${{ github.repository }}"
